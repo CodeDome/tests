@@ -7,11 +7,12 @@
 步骤2：
  输入 ssh-add ~/.ssh/id_rsq
  再次输入密码就保存成功了
-
-
+（若以上不能解决问题则用：
+     $eval `ssh-agent -s` 注意这里是反引号
+      $ssh-add  命令即可解决问题）
+博客地址：http://blog.sina.com.cn/s/blog_72827fb101018wuj.html
 3.创建密码
 （1）ssh-agent -s
 （2） vim ~/.ssh/id_rsa.pub（查看要复制的密码）
  （3）粘贴到github网站上
 （4）ssh -T git@github.com（查看状态）
-
