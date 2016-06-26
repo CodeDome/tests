@@ -1,0 +1,17 @@
+1.为远程仓库添加秘钥指定用户明和密码
+ ssh -keygen -t rsa -C "1469667326@qq.com"
+2.在命令提示符中保存密码
+步骤1：
+(1)MAC上输入 eval "$(ssh-agent -S)"
+（2）windows 上输入ssh-agent -S
+步骤2：
+ 输入 ssh-add ~/.ssh/id_rsq
+ 再次输入密码就保存成功了
+
+
+3.创建密码
+（1）ssh-agent -s
+（2） vim ~/.ssh/id_rsa.pub（查看要复制的密码）
+ （3）粘贴到github网站上
+（4）ssh -T git@github.com（查看状态）
+
